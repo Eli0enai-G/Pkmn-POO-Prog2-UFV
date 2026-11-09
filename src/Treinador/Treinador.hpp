@@ -4,7 +4,7 @@
 class Treinador {
 private: //uml do xulio
     std::string nome;
-    Pokemon * equipe[3];
+    Pokemon* equipe[3];
     Item* itens[2];
     int ativo;
 public:
@@ -12,9 +12,9 @@ public:
     ~ Treinador () ;
 
     std::string getNome () ;
-    Pokemon * getPokemon (int indice ) ;
-    Pokemon * getAtivo () ;
-    Item * getItem ( int indice ) ;
+    Pokemon* getPokemon (int indice ) ;
+    Pokemon* getAtivo () ;
+    Item* getItem ( int indice ) ;
     int getIndiceAtivo () ;
 
     bool trocar ( int indice ) ;
@@ -22,3 +22,4 @@ public:
     bool usarItem ( int item , int alvo ) ;
 };
  #endif
+ 
