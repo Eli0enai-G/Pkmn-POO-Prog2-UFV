@@ -20,4 +20,5 @@ public:
     bool trocar ( int indice ) ;
     bool perdeu () ;
     bool usarItem ( int item , int alvo ) ;
+};
  #endif
