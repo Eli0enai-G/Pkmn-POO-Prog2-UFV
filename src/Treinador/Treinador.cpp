@@ -3,12 +3,12 @@
 #include <iostream>
 
 // Add os trem de include para os pokemons e itens
-#include "Pokemon/PokemonFogo.h"
-#include "Pokemon/PokemonAgua.h"
-#include "Pokemon/PokemonPlanta.h"
-#include "Pokemon/PokemonEletrico.h"
-#include "Item/Cura.h"
-#include "Item/Fortificante.h"
+#include "Pokemon/PokemonFogo.hpp"
+#include "Pokemon/PokemonAgua.hpp"
+#include "Pokemon/PokemonPlanta.hpp"
+#include "Pokemon/PokemonEletrico.hpp"
+#include "Item/Cura.hpp"
+#include "Item/Fortificante.hpp"
 // O treinador vai ler tudo para controlar as partidas
 // tomar cuidado pra nn criar nada NADA
 
@@ -44,32 +44,29 @@ Treinador::Treinador(std::string nome, int pokemons[3]) {
     itens[1] = new Fortificante();
 }
 
-std::string Treinador::getNome() {
+std::string Treinador::getNome() const {
     return nome;
 }
 
-Pokemon* Treinador::getPokemon(int indice){
-    if(indice<0 || indice>=3) return nullptr;
+Pokemon* Treinador::getPokemon(int indice) const {
+    if (indice < 0 || indice >= 3) return nullptr;
     return equipe[indice];
 }
-Pokemon* Treinador::getAtivo() {
+
+Pokemon* Treinador::getAtivo() const {
     return equipe[ativo];
 }
-Item* Treinador::getItem(int indice) {
-    if(indice<0 || indice>=2) return nullptr;
+
+Item* Treinador::getItem(int indice) const {
+    if (indice < 0 || indice >= 2) return nullptr;
     return itens[indice];
 }
-int Treinador::getIndiceAtivo() {
+
+int Treinador::getIndiceAtivo() const {
     return ativo;
 }
-bool Treinador::trocar(int indice) {
-    if (indice < 0 || indice >= 3 || indice == ativo) return false;
-    if (equipe[indice] == nullptr || equipe[indice]->derrotado()) return false;
 
-    ativo = indice;
-    return true;
-}
-bool Treinador::perdeu() {
+bool Treinador::perdeu() const {
     for (int i = 0; i < 3; i++) {
         if (equipe[i] != nullptr && !equipe[i]->derrotado()) {
             return false;

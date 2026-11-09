@@ -1,7 +1,7 @@
 #ifndef GOLPE_CURA_HPP
 #define GOLPE_CURA_HPP
 
-#include "Golpe.h"
+#include "Golpe.hpp"
 
 class GolpeCura : public Golpe {
 private:
