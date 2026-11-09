@@ -46,3 +46,39 @@ void Pokemon::definirGolpe(int indice, Golpe* golpe){
     }
     golpes[indice] = golpe;
 }
+//metodos perda de hp
+int Pokemon::perderVida(int quantidade) {
+    if (quantidade <= 0) return 0;
+    int vidaAnterior = vida;
+    vida = std::max(0, vida - quantidade);
+    return vidaAnterior - vida; 
+    // vida perdida
+}
+int Pokemon::curar(int quantidade) {
+    if (quantidade <= 0 || derrotado()) return 0;
+    int vidaAnterior = vida;
+    vida = std::min(vidaMaxima, vida + quantidade);
+    return vida - vidaAnterior; // Retorna a quantidade efetivamente curada
+}
+void Pokemon::reduzirAtaque(int quantidade) {
+    if (quantidade > 0) {
+        reducaoProximoAtaque = quantidade;
+    }
+} 
+int Pokemon::consumirReducaoAtaque() {
+    int reducao = reducaoProximoAtaque;
+    reducaoProximoAtaque = 0; // Redefine para zero após ser consultado/consumido
+    return reducao;
+}
+bool Pokemon::fortalecer() {
+    if (derrotado() || fortalecido) return false;
+    fortalecido = true;
+    return true;
+}
+double Pokemon::consumirFortalecimento() {
+    if (fortalecido) {
+        fortalecido = false; // Remove o efeito após o consumo
+        return 1.1;
+    }
+    return 1.0;
+}
