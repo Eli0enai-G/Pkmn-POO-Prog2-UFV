@@ -11,7 +11,7 @@ Pokemon::Pokemon(std::string nome,int idPokemon,int vida,int ataque,int defesa, 
     this->ataque = ataque;
     this->defesa = defesa;
     this->tipo = tipo;
-    this->reduçãoProximoAtaque = 0;
+    this->reducaoProximoAtaque = 0;
     this->fortalecido = false;
 
     this->golpes[0] = nullptr;

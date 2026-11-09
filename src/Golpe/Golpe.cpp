@@ -1,5 +1,5 @@
-#include "Golpe.h"
-#include "../Pokemon/Pokemon.h"
+#include "Golpe.hpp"
+#include "../Pokemon/Pokemon.hpp"
 #include <cmath>
 #include <algorithm>
 

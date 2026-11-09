@@ -3,9 +3,11 @@
 
 #include "Item.hpp"
 
+class Pokemon;
+
 class Fortificante : public Item {
 public:
-    Fortificante() = default;
+    Fortificante() : Item("Fortificante") {}
     virtual ~Fortificante() = default;
 
     bool usar(Pokemon& alvo) override;

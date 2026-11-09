@@ -1,4 +1,4 @@
-#include "Treinador.h"
+#include "Treinador.hpp"
 #include <fstream>
 #include <iostream>
 
