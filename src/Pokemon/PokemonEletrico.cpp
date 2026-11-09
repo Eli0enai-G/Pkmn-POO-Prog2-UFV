@@ -20,3 +20,4 @@ int PokemonEletrico::calcularDanoRecebido(int dano, std::string tipoAtacante) {
 
     int danoTipo = std::max(1, static_cast<int>(std::round(dano * multiplicador)));
     return danoTipo;
+}
