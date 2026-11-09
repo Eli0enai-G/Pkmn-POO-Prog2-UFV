@@ -1,5 +1,5 @@
-#include "Cura.h"
-#include "../Pokemon/Pokemon.h"
+#include "Cura.hpp"
+#include "../Pokemon/Pokemon.hpp"
 
 bool Cura::usar(Pokemon& alvo) {
     if (alvo.derrotado() || alvo.getVida() >= alvo.getVidaMaxima()) {

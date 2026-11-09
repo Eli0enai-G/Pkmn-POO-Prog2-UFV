@@ -1,5 +1,5 @@
-#include "Fortificante.h"
-#include "../Pokemon/Pokemon.h"
+#include "Fortificante.hpp"
+#include "../Pokemon/Pokemon.hpp"
 
 bool Fortificante::usar(Pokemon& alvo) {
     if (alvo.derrotado()) {

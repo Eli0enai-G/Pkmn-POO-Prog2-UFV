@@ -1,6 +1,6 @@
-#include "PokemonPlanta.h"
-#include "Golpe/GolpeDano.h"
-#include "Golpe/GolpeCura.h"
+#include "PokemonPlanta.hpp"
+#include "Golpe/GolpeDano.hpp"
+#include "Golpe/GolpeCura.hpp"
 #include <cmath>
 #include <algorithm>
 

@@ -1,5 +1,5 @@
-#include "GolpeDano.h"
-#include "Pokemon/Pokemon.h"
+#include "GolpeDano.hpp"
+#include "Pokemon/Pokemon.hpp"
 
 GolpeDano::GolpeDano(std::string nome, int poder)
     : Golpe(nome), poder(poder) {}

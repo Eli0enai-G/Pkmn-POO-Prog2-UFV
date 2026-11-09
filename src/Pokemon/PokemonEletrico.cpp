@@ -1,6 +1,6 @@
-#include "PokemonEletrico.h"
-#include "Golpe/GolpeDano.h"
-#include "Golpe/GolpeCura.h"
+#include "PokemonEletrico.hpp"
+#include "Golpe/GolpeDano.hpp"
+#include "Golpe/GolpeCura.hpp"
 #include <cmath>     
 #include <algorithm> 
 

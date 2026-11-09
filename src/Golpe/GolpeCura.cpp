@@ -1,5 +1,5 @@
-#include "GolpeCura.h"
-#include "Pokemon/Pokemon.h"
+#include "GolpeCura.hpp"
+#include "Pokemon/Pokemon.hpp"
 
 GolpeCura::GolpeCura(std::string nome, int poder, int quantidade)
     : Golpe(nome), poder(poder), quantidade(quantidade) {}

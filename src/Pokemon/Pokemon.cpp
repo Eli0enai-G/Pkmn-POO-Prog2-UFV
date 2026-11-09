@@ -1,4 +1,4 @@
-#include "Pokemon.h"
+#include "Pokemon.hpp"
 #include <algorithm>
 
 Pokemon::Pokemon(std::string nome,int idPokemon,int vida,int ataque,int defesa, std::string tipo) 
